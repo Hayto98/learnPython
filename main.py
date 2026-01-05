@@ -3,7 +3,7 @@
 # float (số thực)
 # string (chuỗi)
 # boolean
-
+import math
 
 # biến (variable)
 # biến sẽ lưu trữ một giá trị của một đối tượng bên trong nó
@@ -145,4 +145,70 @@ print(type(d)) #<class 'str'>
 name = input("Nhập tên username: ")
 print("Bạn vừa nhập vào là: ", name)
 print("Kiểu dữ liệu của bạn vừa nhập vào: ", type(name))
+
+"""
+    yêu cầu người dùng nhập vào bán kính của hình tròn.
+    Tính và hiển thị ra màn hình chu vi và diện tích của 
+    hình tròn tương ứng
+"""
+
+
+result = float(input("Nhập bán kính đi: "))
+print("Kết quả diện tích hình tròn: ", (result ** 2) * math.pi)
+print("Kết quả chu vi hình tròn: ", 2 * math.pi * result)
+
+# lưu ý nếu dùng input(...) luôn trả type string
+
+'''
+    Yêu cầu người dùng nhập vào 1 số nguyên tương ứng với số giờ 
+    In ra số giây tương ứng 
+'''
+
+hours = int(input('Nhập số giờ: '))
+print("kết quả: ", hours*60*60)
+
+
+
+
+"""
+    Yêu cầu người dùng nhập vào 1 số nguyên n 
+    Tính và in ra tổng số đo các góc của đa giác n cạnh 
+"""
+
+n = int(input("Nhập số nguyên: "))
+print("Tổng số đo các góc của đa giác: ",(n - 2) * 180)
+
+
+"""
+    Yêu cầu người dùng nhập vào 2 số bất kỳ
+    Viết chương trình để đổi giá trị 2 số đó với nhau theo 2 cách 
+"""
+gia_tri_thu_nhat = float(input("Nhập số đầu tiên: "))
+gia_tri_thu_hai = float(input("Nhập số thứ hai: "))
+
+
+#  cách 1
+
+# tmp = gia_tri_thu_hai
+# gia_tri_thu_hai = gia_tri_thu_nhat
+# gia_tri_thu_nhat =tmp
+#
+# print(gia_tri_thu_nhat)
+# print(gia_tri_thu_hai)
+
+
+# cách 2
+# cách này chỉ trong python nó có tên Tuple swap
+# gia_tri_thu_nhat,  gia_tri_thu_hai =  gia_tri_thu_hai, gia_tri_thu_nhat
+
+# cách 3
+gia_tri_thu_nhat = gia_tri_thu_nhat + gia_tri_thu_hai
+gia_tri_thu_hai = gia_tri_thu_nhat - gia_tri_thu_hai
+gia_tri_thu_nhat = gia_tri_thu_nhat - gia_tri_thu_hai
+
+
+
+
+
+
 
